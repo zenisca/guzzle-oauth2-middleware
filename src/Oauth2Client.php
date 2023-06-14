@@ -86,7 +86,7 @@ class Oauth2Client extends Client
 
                         $modify['set_headers']['Authorization'] = 'Bearer '.$token->getToken();
 
-                        return Utils::modifyRequest($request, $modify);
+                        return Psr7\Utils::modifyRequest($request, $modify);
                         //return Psr7\modify_request($request, $modify);
                     }
                 }
